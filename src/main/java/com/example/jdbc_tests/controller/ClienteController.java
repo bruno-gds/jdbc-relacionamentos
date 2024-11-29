@@ -26,6 +26,11 @@ public class ClienteController {
         return clienteService.obterClienteComPedidos(clienteId);
     }
 
+    @PostMapping
+    public Long salvarClienteComPedidos(@RequestBody ClienteComPedidosJson clienteComPedidosJson) {
+        return clienteService.salvarClienteComPedidos(clienteComPedidosJson);
+    }
+
     @DeleteMapping("{clienteId}")
     public void deletarClienteComPedidos(@PathVariable Long clienteId) {
         clienteService.deletarClienteComPedidos(clienteId);
